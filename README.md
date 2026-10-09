@@ -4,4 +4,5 @@ Este proyecto consiste en el diseño conceptual de una base de datos para organi
 Decisiones de diseño y arquitectura: para evitar la **redundancia de datos** y optimizar la flexibilidad del sistema, se han tomado las siguientes decisiones de modelado:
 * **Relaciones Recursivas con Roles**  En lugar de crear entidades rígidas para cada tipo de parentesco (¨tío¨, äbuel¨, ¨primo¨), el sistema modela la familia mediante dos relaciones recursivas sobre la entidad ´MIEMBRO´: *´<progenitor>´: con cardinalidad ´(0.2)´para registrar  los enlaces directos de padre/madre biológicos. El valor ´0´actúa como tope dinámico para permitir el registro de ancestros sin obligar a la recursividad infinita. *´<pareja>´: con cardinalidad ´(0.1)´para las relaciones conyugales.
 * **Cálculo Dinámico: **Gracias a este enfoque, el sistema es capaz de deducir automáticamente cualquier parentesco biológico o político mediante consultas jerárquicas en el código, manteniendo la base de datos limpia de duplicidad.
-## Diagrama Entidad-Relación ![Diagrama de Familia](Diagrama FAMILIA.drawio.png)
+## 📊 Diagrama Entidad-Relación
+![Diagrama de Familia](Diagrama FAMILIA.drawio.png)
